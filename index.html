@@ -1,3 +1,78 @@
 <html>
-	<h1> Hello World! </h1>
+	<style type="text/css">
+	body{
+		background-image: url("http://img.xjh.me/desktop/bg/nature/64080878_p0.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		margin:0px;
+	}
+	#main-container > .content-back{
+		position: fixed;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		line-height: 1.2;
+		width: 2.5em;
+		z-index: 5;
+		background-color: #001FBF3F;
+		border:none;
+		transition: all .25s ease;
+	}
+	#main-container > .content-back > button{
+		background-color: transparent;
+		opacity: .75;
+		height: 2.5em;
+		width: 2.5em;
+		transition: all .15s ease;
+		border: none;
+		text-align: left;
+		outline: none;
+		padding: 0px;
+		border-radius: 0px;
+		margin: 0px;
+		width: 100%;
+	}
+	#main-container > .content-back > button > svg{
+		height: 2.5em;
+		width: 2.5em;
+	}
+	#main-container > .content-back > button:hover{
+		border: none;
+		margin: 0px;
+		background-color: #FFFFFF3F;
+		opacity: 1;
+	}
+	#main-container > .content-back > button:focus{
+		border: none;
+		margin: 0px;
+	}
+	</style>
+	<script type="text/javascript">
+	function setSidebar(){
+		var navi=document.getElementById("sidebar");
+		if(navi.style.width == "200px"){
+			navi.style.width= "40px";
+		}else{
+			navi.style.width= "200px";
+		}
+	}
+	</script>
+	<head>
+	</head>
+	<body>
+		<div id="main-container" style="display:flex">
+			<nav class="content-back" id="sidebar">
+				<button class="expand" onClick="setSidebar()">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+						<path d="M12 12 L28 12" stroke="#FFFFFF" stroke-width="2" />
+						<path d="M12 17 L28 17" stroke="#FFFFFF" stroke-width="2" />
+						<path d="M12 22 L28 22" stroke="#FFFFFF" stroke-width="2" />
+					</svg>
+				</button>
+			</nav>
+		</div>
+	</body>
 </html>
