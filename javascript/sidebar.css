@@ -1,0 +1,55 @@
+body{
+	background-image: url("/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+	background-attachment: fixed;
+	margin:0px;
+}
+#main-container > .content-back{
+	position: fixed;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	line-height: 1.2;
+	width: 2.5em;
+	z-index: 5;
+	background-color: #001FBF3F;
+	border:none;
+	transition: all .25s ease;
+}
+#main-container > .content-back > button{
+	background-color: transparent;
+	opacity: .75;
+	height: 2.5em;
+	width: 2.5em;
+	transition: all .15s ease;
+	border: none;
+	text-align: left;
+	outline: none;
+	padding: 0px;
+	border-radius: 0px;
+	margin: 0px;
+	width: 100%;
+	overflow: hidden;
+}
+#main-container > .content-back > button > div > svg{
+	height: 2.5em;
+	width: 2.5em;
+}
+#main-container > .content-back > button:hover{
+	border: none;
+	margin: 0px;
+	background-color: #FFFFFF3F;
+	opacity: 1;
+}
+.nav-menu-items{
+	transition: all .25s ease;
+	opacity:0;
+	display:inline-block;
+	color:#FFF;
+	width:120px;
+	vertical-align:top;
+	margin:0px
+}
