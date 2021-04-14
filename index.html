@@ -1,96 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-	<style type="text/css">
-	body{
-		background-image: url("/background.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		margin:0px;
-	}
-	#main-container > .content-back{
-		position: fixed;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		text-align: left;
-		line-height: 1.2;
-		width: 2.5em;
-		z-index: 5;
-		background-color: #001FBF3F;
-		border:none;
-		transition: all .25s ease;
-	}
-	#main-container > .content-back > button{
-		background-color: transparent;
-		opacity: .75;
-		height: 2.5em;
-		width: 2.5em;
-		transition: all .15s ease;
-		border: none;
-		text-align: left;
-		outline: none;
-		padding: 0px;
-		border-radius: 0px;
-		margin: 0px;
-		width: 100%;
-		overflow: hidden;
-	}
-	#main-container > .content-back > button > div > svg{
-		height: 2.5em;
-		width: 2.5em;
-	}
-	#main-container > .content-back > button:hover{
-		border: none;
-		margin: 0px;
-		background-color: #FFFFFF3F;
-		opacity: 1;
-	}
-	.nav-menu-items{
-		transition: all .25s ease;
-		opacity:0;
-		display:inline-block;
-		color:#FFF;
-		width:120px;
-		vertical-align:top;
-		margin:0px
-	}
-	</style>
-	<script type="text/javascript">
-	function showText(dest){
-		navText = document.getElementById(dest);
-		navText.style.opacity = 1;
-	}
-	function navigateTo(dest){
-		window.location.href=dest;
-	}
-	function hideText(dest){
-		navText = document.getElementById(dest);
-		navText.style.opacity = 0;
-	}
-	function setSidebar(){
-		var navi=document.getElementById("sidebar");
-		if(navi.style.width == "200px"){
-			hideText("nav-menu-item-0");
-			hideText("nav-menu-item-1");
-			hideText("nav-menu-item-2");
-			navi.style.width= "40px";
-		}else{
-			navi.style.width= "200px";
-			setTimeout(showText,250,"nav-menu-item-0");
-			setTimeout(showText,500,"nav-menu-item-1");
-			setTimeout(showText,600,"nav-menu-item-2");
-		}
-	}
-	</script>
+	<link rel="stylesheet" href="/css-styles/sidebar.css" type="text/css" />
+	<script src="/javascript/sidebar.js"> </script>
 	<head>
+		<title>NetherDevil 的主页</title>
 	</head>
 	<body>
 		<div id="main-container" style="display:flex">
 			<nav class="content-back" id="sidebar">
-				<button class="expand" onClick="setSidebar()">
+				<button class="expand" onClick="setSidebar()" title="展开">
 					<div style="display:inline-block">
 						<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
 							<path d="M12 12 L28 12" stroke="#FFFFFF" stroke-width="2" />
@@ -103,7 +22,7 @@
 					</div>
 				</button>
 				<div style="height:40px"> </div>
-				<button class="nav-item" onClick="navigateTo(&quot;/&quot;)">
+				<button class="nav-item" onClick='navigateTo("/")' title="主页">
 					<div style="display:inline-block">
 						<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
 							<path d="M20 12 L12 16 L15 16 L15 22 L25 22 L25 16 L28 16 L26 15 L26 12 L24 12 L24 14 L20 12" stroke="#FFFFFF" fill="#FFFFFF" stroke-width="1" />
@@ -113,7 +32,7 @@
 						<p style="text-align:center;margin:6px;font-size:14px">主页</p>
 					</div>
 				</button>
-				<button class="nav-item" onClick="navigateTo(&quot;/contents&quot;)">
+				<button class="nav-item" onClick='navigateTo("/contents")' title="目录">
 					<div style="display:inline-block">
 						<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
 							<path d="M14 10 L14 24 L26 24 L26 10" stroke="#FFFFFF" fill="#FFFFFF" stroke-width="1" />
